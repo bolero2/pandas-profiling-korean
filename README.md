@@ -26,7 +26,7 @@ pip install -r requirements.txt
   
 # Thanks to...
 1. Pandas-Profiling official Repository : https://github.com/ydataai/pandas-profiling
-2. How-to-change Font? : https://www.youtube.com/watch?v=BhZvZpNF9jU
+2. 한번에 EDA 리포트 짱짱 pandas profiling 한글 폰트로 고통받는다면? (유튜브 **오늘코드todaycode**) : https://www.youtube.com/watch?v=BhZvZpNF9jU
 
 -----
 
