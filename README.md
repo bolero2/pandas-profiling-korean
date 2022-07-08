@@ -195,9 +195,9 @@ if html_obj is not None:
 > 5. (재언급) **ruamel-yaml** 패키지 설치해야 함 : `pip install ruamel-yaml`
 6. 실행 결과 - **한글 패치가 필요한 경우**
 ```plain
-(neural) gpuadmin@gpusystem:~/dc/neural-framework/dc$ python pandas_profiling_test.py 
+(neural) admin@server:~/dc$ python pandas_profiling_test.py 
 
- - Target context.py path : /home/gpuadmin/.conda/envs/neural/lib/python3.8/site-packages/pandas_profiling/visualisation/context.py
+ - Target context.py path : /home/admin/.conda/envs/neural/lib/python3.8/site-packages/pandas_profiling/visualisation/context.py
  - !!! You should have to update context.py file !!!
 
  Write new function ............ 
@@ -294,7 +294,7 @@ def manage_matplotlib_context() -> Any:
 
 
 
- Insert here -> /home/gpuadmin/.conda/envs/neural/lib/python3.8/site-packages/pandas_profiling/visualisation/context.py
+ Insert here -> /home/admin/.conda/envs/neural/lib/python3.8/site-packages/pandas_profiling/visualisation/context.py
  Success.
 
 
@@ -324,14 +324,14 @@ Render HTML: 100%|████████████████████�
 Export report to file: 100%|██████████████████████████████| 1/1 [00:00<00:00, 27.35it/s]
 
 
- - Saving [report.html] is Successful ! : /home/gpuadmin/dc/neural-framework/dc/report.html
+ - Saving [report.html] is Successful ! : /home/admin/dc/neural-framework/dc/report.html
 
 ```
 7. 실행 결과 - **한글 패치가 필요없는 경우**
 ```plain
-(neural) gpuadmin@gpusystem:~/dc/neural-framework/dc$ python pandas_profiling_test.py 
+(neural) admin@server:~/dc/neural-framework/dc$ python pandas_profiling_test.py 
 
- - Target context.py path : /home/gpuadmin/.conda/envs/neural/lib/python3.8/site-packages/pandas_profiling/visualisation/context.py
+ - Target context.py path : /home/admin/.conda/envs/neural/lib/python3.8/site-packages/pandas_profiling/visualisation/context.py
  - Don't have to update context.py file!
 
 
@@ -361,7 +361,7 @@ Render HTML: 100%|████████████████████�
 Export report to file: 100%|██████████████████████████████| 1/1 [00:00<00:00, 32.39it/s]
 
 
- - Saving [report.html] is Successful ! : /home/gpuadmin/dc/neural-framework/dc/report.html
+ - Saving [report.html] is Successful ! : /home/admin/dc/report.html
 
 
 ```
