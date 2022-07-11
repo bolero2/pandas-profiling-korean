@@ -1,0 +1,4 @@
+pip install pandas==1.2.5
+pip install ruamel-yaml
+pip install markupsafe==2.0.1
+pip install pandas_profiling==3.2.0
