@@ -99,8 +99,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Pandas Profiling - Making Korean profile')
 
     parser.add_argument("--file", type=str, help='Input dataset(csv, xlsx)')
+
     parser.add_argument("--html", action='store_true', help='returned html file')
     parser.add_argument("--json", action='store_true', help='returned json file')
+#    parser.add_argument("--iframe", action='store_true', help='returned iframe file')
 
     args = parser.parse_args()
 
@@ -144,8 +146,8 @@ if __name__ == "__main__":
     warnings.filterwarnings("ignore")
 
     print("\n============ read csv/excel data using pandas package + DESCRIBE ============ ")
-    # data = pd.read_csv("BostonHousing_noNaN_forRegressor.csv")
     data = None
+
     if args.file.endswith("csv"):
         print("Dataset extention : [csv]\n")
         data = pd.read_csv(args.file)
@@ -159,9 +161,9 @@ if __name__ == "__main__":
 
     profile = ProfileReport(data, title="Dataset Profiling Report", explorative=True)
 
+    pwd = os.getcwd()
     if args.html:
         print("\n\n============ Save profiling report to html file ============ ")
-        pwd = os.getcwd()
         filename = os.path.join(pwd, "report.html")
         profile.to_file(filename)
 
@@ -171,12 +173,15 @@ if __name__ == "__main__":
     elif args.json:
         import json
 
-        pwd = os.getcwd()
         filename = os.path.join(pwd, "report.json")
         json_data = profile.to_json()
 
         with open(filename, "w") as f:
             json.dump(json_data, f)
+
+#    elif args.iframe:
+#        iframe = profile.to_notebook_iframe()
+#        print(iframe)
 
     else:
         raise NotImplementedError
